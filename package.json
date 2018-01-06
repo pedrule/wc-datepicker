@@ -1,0 +1,45 @@
+{
+  "name": "rd-datepicker",
+  "version": "1.0.0",
+  "description": "this is a light component to display a date picker. It use web-component specs V1 to be able to run successfully on most popular web platforms and js frameworks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wct",
+    "build": "./node_modules/.bin/webpack --watch",
+    "start": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --watch"
+  },
+  "keywords": [
+    "web-component",
+    "datepicker",
+    "webpack",
+    "npm"
+  ],
+  "author": "pierre Alibert",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.renault-digital.com/shared/wc-rd-datepicker.git"
+  },
+  "devDependencies": {
+    "@polymer/iron-flex-layout": "^3.0.0-pre.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "latest",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "web-component-tester": "^6.4.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "polymer-cli": "^1.5.7"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.1",
+    "@polymer/iron-flex-layout": "^3.0.0-pre.1",
+    "@polymer/iron-icons": "^3.0.0-pre.1",
+    "@polymer/iron-iconset-svg": "^3.0.0-pre.1",
+    "@polymer/iron-icon": "^3.0.0-pre.1",
+    "@polymer/iron-pages": "^3.0.0-pre.1"
+  }
+}

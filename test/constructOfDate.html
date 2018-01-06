@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src=../bower_components/webcomponentsjs/webcomponents-lite.js></script>
+    <script src=../bower_components/web-component-tester/browser.js></script>
+    <script src=../dist/main.bundle.js></script>
+</head>
+<body>
+<test-fixture id="basic">
+    <template>
+        <rd-input-datepicker></rd-input-datepicker>
+    </template>
+</test-fixture>
+<script>
+    suite('singleton specs', ()=> {
+        setup(()=>{
+            this.element = fixture('basic');
+            this.singleton = document.body.querySelector('rd-datepicker');
+            this.callSingleton = () => {
+                this.element.$.input.dispatchEvent(new MouseEvent('click', {bubbles: true, composed: true}));
+            }
+        });
+        suite('if a new instance of rd-input-datepicker is initialized',()=>{
+            test('a rd-datepicker singleton is added the dom', ()=>{
+                expect(document.body.querySelectorAll('rd-datepicker').length).to.equal(1);
+            });
+
+            test('singleton is not visible', ()=> {
+                expect(this.singleton.show).to.equal(false);
+            })
+        });
+
+        suite('when user click on rd-input-datepicker', ()=>{
+            test('singleton become visible', ()=>{
+                this.callSingleton();
+                expect(this.singleton.show).to.equal(true);
+            })
+        });
+
+        suite('position of singleton relatively to position od input inside of DOM', ()=>{
+            setup(()=>{
+                this.element.style.position = "absolute";
+            });
+
+            test('by default, datepicker is displayed behind of input', ()=>{
+                this.callSingleton();
+                expect(this.singleton.canBeBelow).to.equal(true);
+            });
+
+            suite('if input is displayed at bottom of window, ', ()=>{
+                setup(()=>{
+                    this.element.style.bottom = "0";
+                    this.callSingleton();
+                });
+
+                test('datepicker is not displayed behind of input', ()=>{
+                    expect(this.singleton.canBeBelow).to.equal(false);
+                });
+
+                test('datepicker is displayed on top of input', ()=>{
+                    expect(this.singleton.shouldBeOnTop).to.equal(true);
+                });
+            })
+        });
+
+        suite('selectedDate of iris-input,', ()=>{
+           suite('if there is not selectedDate already setted, current date is displayed by rd-datepicker', ()=>{
+               setup(()=>{
+                   this.element.fireEventToIrisSingleton();
+               });
+
+               test(' singleton as selectedDay property equal to currentDay', ()=>{
+                   expect(this.singleton.selectedDay).to.equal(new Date(Date.now()).getDate());
+               });
+
+               test(' singleton as selectedMonth property equal to currentDay', ()=>{
+                   expect(this.singleton.selectedMonth).to.equal(new Date(Date.now()).getMonth());
+               });
+
+               test(' singleton as selectedYear property equal to currentDay', ()=>{
+                   expect(this.singleton.selectedYear).to.equal(new Date(Date.now()).getFullYear());
+               });
+           })
+        });
+
+        suite('keyboard behavior on rd-input-datepicker', ()=>{
+
+        })
+    })
+</script>
+</body>
+</html>

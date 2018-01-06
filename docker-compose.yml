@@ -1,0 +1,52 @@
+version: "3.3"
+
+services:
+  datepicker_start:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --hot
+    volumes:
+      - type: bind
+        source: ./src
+        target: /src
+      - type: volume
+        source: dist
+        target: /dist
+    ports:
+          - "1812:1812"
+
+  datepicker_build:
+      build:
+        context: .
+        dockerfile: Dockerfile-build
+      command: ./node_modules/.bin/webpack --watch --watch-poll=1000
+      volumes:
+        - type: bind
+          source: ./src
+          target: /src
+        - type: volume
+          source: dist
+          target: /dist
+      ports:
+            - "1813:1813"
+
+  datepicker_test:
+    build:
+      context: .
+      dockerfile: Dockerfile_test
+    command: ./node_modules/.bin/polymer serve --port=1814 --hostname 0.0.0.0
+    volumes:
+      - type: bind
+        source: ./test
+        target: /test
+      - type: volume
+        source: dist
+        target: /dist
+    ports:
+          - "1814:1814"
+
+volumes:
+  dist:
+
+

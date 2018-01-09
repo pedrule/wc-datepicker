@@ -10,8 +10,8 @@ services:
       - type: bind
         source: ./src
         target: /src
-      - type: volume
-        source: dist
+      - type: bind
+        source: ./dist
         target: /dist
     ports:
           - "1812:1812"
@@ -25,8 +25,8 @@ services:
         - type: bind
           source: ./src
           target: /src
-        - type: volume
-          source: dist
+        - type: bind
+          source: ./dist
           target: /dist
       ports:
             - "1813:1813"
@@ -40,13 +40,10 @@ services:
       - type: bind
         source: ./test
         target: /test
-      - type: volume
-        source: dist
+      - type: bind
+        source: ./dist
         target: /dist
     ports:
           - "1814:1814"
-
-volumes:
-  dist:
 
 

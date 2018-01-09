@@ -123,4 +123,3 @@ export class IrisInput extends Element {
         }
     }
 }
-customElements.define('iris-input', IrisInput);

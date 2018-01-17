@@ -87,5 +87,10 @@ export class IrisInputDatepicker extends InputSingleton {
                 break;
         }
     }
+
+    reset() {
+        this.selectedItems = [];
+        this.$.input.value = "";
+    }
 }
 customElements.define('rd-input-datepicker', IrisInputDatepicker);

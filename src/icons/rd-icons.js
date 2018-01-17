@@ -4,7 +4,7 @@ import '@polymer/iron-iconset-svg/iron-iconset-svg';
 const $_documentContainer = document.createElement('div');
 $_documentContainer.setAttribute('style', 'display: none;');
 
-$_documentContainer.innerHTML = `<iron-iconset-svg name="iris-icons" size="100">
+$_documentContainer.innerHTML = `<iron-iconset-svg name="rd-datepicker-icons" size="100">
 <svg>
     <defs>
         <g id="chevron" viewBox="0 0 8 5">

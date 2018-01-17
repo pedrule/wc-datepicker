@@ -44,7 +44,7 @@ export class IrisIcon extends Element {
             
             
         </style>
-        <paper-icon-button icon=iris-icons:[[icon]] no-raise></paper-icon-button>
+        <paper-icon-button icon=rd-datepicker-icons:[[icon]] no-raise></paper-icon-button>
         `
     }
 }

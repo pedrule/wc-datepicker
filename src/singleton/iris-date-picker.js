@@ -88,14 +88,14 @@ export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWi
             ${this.styleGridTemplate}
             <div id="window" class="appear specialShadow">
                 <div id="header" class="layout horizontal center-center" on-click="_handleActionOnHeader">
-                    <iron-icon id="lessYear"  icon="iris-icons:double_chevron_datepicker" class="less hoverable"></iron-icon>
-                    <iron-icon id="lessMonth" icon="iris-icons:chevron_datepicker" class="less hoverable"></iron-icon>
+                    <iron-icon id="lessYear"  icon="rd-datepicker-icons:double_chevron_datepicker" class="less hoverable"></iron-icon>
+                    <iron-icon id="lessMonth" icon="rd-datepicker-icons:chevron_datepicker" class="less hoverable"></iron-icon>
                     <div id="date" class="layout horizontal center-center" on-click="_onclickDate">
                         <div id="month" class="hoverable">[[setActiveMonth(activeMonth)]]</div>
                         <div id="year" class="hoverable">[[activeYear]]</div>
                     </div>
-                    <iron-icon id="moreMonth" class=" hoverable" icon="iris-icons:chevron_datepicker"></iron-icon>
-                    <iron-icon id="moreYear" class=" hoverable" icon="iris-icons:double_chevron_datepicker"></iron-icon>
+                    <iron-icon id="moreMonth" class=" hoverable" icon="rd-datepicker-icons:chevron_datepicker"></iron-icon>
+                    <iron-icon id="moreYear" class=" hoverable" icon="rd-datepicker-icons:double_chevron_datepicker"></iron-icon>
                 </div>
                 <div id="content" class="layout vertical">
                     <div id="dayOfWeek" class="layout horizontal around-justified" hidden$="[[_daysOfWeekVisible(selected)]]">

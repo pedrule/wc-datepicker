@@ -1,0 +1,9 @@
+FROM node:latest
+
+
+RUN npm install -g bower
+RUN npm install -g yarn
+RUN mkdir bundle_wc
+RUN npm install -g create-react-app
+COPY ./react-app/package.json /app-test/package.json
+

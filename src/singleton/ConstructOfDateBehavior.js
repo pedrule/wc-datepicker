@@ -171,10 +171,13 @@ export const ConstructOfDate = SuperClass => class extends TranslateDateBehavior
     _placeLastDayOfPreviousMonth() {
         let lastDayOfPrevMonth = new Date(this.activeYear, this.activeMonth, 0).getDate();
         let indexOfLastDateOfPrevMonth = new Date(this.activeYear, this.activeMonth, 0).getDay();
-        this.$.gridDay.children[indexOfLastDateOfPrevMonth].innerHTML = lastDayOfPrevMonth;
-        for(let i = indexOfLastDateOfPrevMonth; i>= 0; i--) {
-            this.$.gridDay.children[i].innerHTML = lastDayOfPrevMonth - (indexOfLastDateOfPrevMonth-i);
-            this._addClassDay(i, false);
+        if(this.$.gridDay.children[indexOfLastDateOfPrevMonth])
+        {
+            this.$.gridDay.children[indexOfLastDateOfPrevMonth].innerHTML = lastDayOfPrevMonth;
+            for(let i = indexOfLastDateOfPrevMonth; i>= 0; i--) {
+                this.$.gridDay.children[i].innerHTML = lastDayOfPrevMonth - (indexOfLastDateOfPrevMonth-i);
+                this._addClassDay(i, false);
+            }
         }
         return indexOfLastDateOfPrevMonth;
     }

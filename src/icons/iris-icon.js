@@ -1,7 +1,7 @@
-import { Element } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import '@polymer/paper-icon-button/paper-icon-button';
 
-export class IrisIcon extends Element {
+export class IrisIcon extends PolymerElement {
     static get properties() {
         return {
             icon: {

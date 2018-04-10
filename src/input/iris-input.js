@@ -1,4 +1,4 @@
-import { Element } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import '@polymer/iron-icon/iron-icon';
 
@@ -19,7 +19,7 @@ data : this data
 target:  this
 */
 
-export class IrisInput extends Element {
+export class IrisInput extends PolymerElement {
     static get properties() {
         return {
             placeholder: {

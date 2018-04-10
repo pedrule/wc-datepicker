@@ -1,6 +1,6 @@
 
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
-import { Element } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 import {SingletonBehavior} from "./SingletonBehavior";
 import { ConstructOfDate } from "./ConstructOfDateBehavior";
 import '@polymer/iron-icon/iron-icon';
@@ -9,7 +9,7 @@ import '../icons/rd-icons';
 import {PositionWithCursorBehavior} from "./PositionWithCursor";
 
 
-export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWithCursorBehavior(Element))) {
+export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWithCursorBehavior(PolymerElement))) {
     static get properties() {
         return {
             selectedItems: {
@@ -193,6 +193,7 @@ export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWi
     _selectActiveDay(event) {
         this.selectedMonth = this.activeMonth;
         this.selectedYear = this.activeYear;
+        this.selectedDay = undefined;
         this.selectedDay = parseInt(event.target.innerHTML);
     }
 

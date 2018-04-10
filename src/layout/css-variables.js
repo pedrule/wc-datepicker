@@ -1,4 +1,3 @@
-import '@polymer/polymer/polymer.js';
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
 const $_documentContainer = document.createElement('div');

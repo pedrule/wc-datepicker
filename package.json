@@ -21,7 +21,7 @@
     "url": "git+https://git.renault-digital.com/shared/wc-rd-datepicker.git"
   },
   "devDependencies": {
-    "@polymer/iron-flex-layout": "^3.0.0-pre.1",
+    "@polymer/iron-flex-layout": "next",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "latest",
@@ -35,11 +35,11 @@
     "polymer-cli": "^1.5.7"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0-pre.1",
-    "@polymer/iron-flex-layout": "^3.0.0-pre.1",
-    "@polymer/iron-icons": "^3.0.0-pre.1",
-    "@polymer/iron-iconset-svg": "^3.0.0-pre.1",
-    "@polymer/iron-icon": "^3.0.0-pre.1",
-    "@polymer/iron-pages": "^3.0.0-pre.1"
+    "@polymer/polymer": "next",
+    "@polymer/iron-flex-layout": "next",
+    "@polymer/iron-icons": "next",
+    "@polymer/iron-iconset-svg": "next",
+    "@polymer/iron-icon": "next",
+    "@polymer/iron-pages": "next"
   }
 }

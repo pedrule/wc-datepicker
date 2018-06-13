@@ -1,11 +1,11 @@
-
+import { html } from '@polymer/polymer/polymer-element.js';
 import {InputSingleton} from "./input-base-singleton";
 import '../singleton/iris-date-picker';
 import '../layout/css-variables';
 
 export class IrisInputDatepicker extends InputSingleton {
     static get inputTemplate() {
-        return `
+        return html`
             <input
                 type="text"
                 placeholder="[[placeholder]]"
@@ -24,7 +24,7 @@ export class IrisInputDatepicker extends InputSingleton {
     }
 
     static get styleTemplate() {
-        return `
+        return html`
             ${super.styleTemplate}
             <style>
                 :host{

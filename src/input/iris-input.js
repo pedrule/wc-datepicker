@@ -1,4 +1,4 @@
-import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import '@polymer/iron-icon/iron-icon';
 
@@ -40,14 +40,14 @@ export class IrisInput extends PolymerElement {
     }
 
     static get template() {
-        return `
+        return html`
             ${this.styleTemplate}
             ${this.inputTemplate}
         `
     }
 
     static get inputTemplate() {
-        return `
+        return html`
             <slot name="preIcon"></slot>
             <input
                 type="text"
@@ -62,13 +62,13 @@ export class IrisInput extends PolymerElement {
     }
 
     static get styleHostCenter() {
-        return `
+        return html`
             @apply --layout-center-center;
         `
     }
 
     static get styleTemplate() {
-        return `
+        return html`
             <style include="iron-flex iron-flex-alignment">
                 :host{
                     @apply --layout-horizontal;

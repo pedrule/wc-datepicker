@@ -1,6 +1,6 @@
 
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
-import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import {SingletonBehavior} from "./SingletonBehavior";
 import { ConstructOfDate } from "./ConstructOfDateBehavior";
 import '@polymer/iron-icon/iron-icon';
@@ -30,7 +30,7 @@ export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWi
         }
     }
     static get template() {
-        return `
+        return html`
             ${this.stylePositionTemplate}
             <style include="iron-flex iron-flex-alignment">
                 :host{

@@ -1,4 +1,4 @@
-
+import { html } from '@polymer/polymer/polymer-element.js';
 
 export const PositionBehavior = SuperClass => class extends SuperClass {
     static get properties() {
@@ -23,7 +23,7 @@ export const PositionBehavior = SuperClass => class extends SuperClass {
     }
 
     static get stylePositionTemplate() {
-        return `
+        return html`
         <style include="iron-flex iron-flex-alignment">
                 :host{
                     @apply --layout-fit;

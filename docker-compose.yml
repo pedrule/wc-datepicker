@@ -10,8 +10,8 @@ services:
       - type: bind
         source: ./src
         target: /src
-      - type: bind
-        source: ./dist
+      - type: volume
+        source: wc
         target: /dist
     ports:
           - "1812:1812"
@@ -40,27 +40,27 @@ services:
       - type: bind
         source: ./test
         target: /test
-      - type: bind
-        source: ./dist
+      - type: volume
+        source: wc
         target: /dist
     ports:
           - "1814:1814"
 
-  datepicker_in_react:
-    build:
-      context: .
-      dockerfile: Dockerfile_react
-    command: yarn start
-    working_dir: /app-test
-    ports:
-      - "3000:3000"
-    volumes:
-      - type: volume
-        source: wc
-        target: /bundle_wc
-      - type: bind
-        source: ./react-app
-        target: /app-test
+  # datepicker_in_react:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile_react
+  #   command: yarn start
+  #   working_dir: /app-test
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - type: volume
+  #       source: wc
+  #       target: /bundle_wc
+  #     - type: bind
+  #       source: ./react-app
+  #       target: /app-test
 
 
 volumes:

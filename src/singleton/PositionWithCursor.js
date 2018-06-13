@@ -1,4 +1,5 @@
 import {PositionBehavior} from "./PositionBehavior";
+import { html } from '@polymer/polymer/polymer-element.js';
 
 export const PositionWithCursorBehavior  = SuperClass => class extends PositionBehavior(SuperClass) {
     static get properties() {
@@ -17,7 +18,7 @@ export const PositionWithCursorBehavior  = SuperClass => class extends PositionB
     }
 
     static get stylePositionTemplate() {
-        return `
+        return html`
             ${super.stylePositionTemplate}
             <style>
                 :host{

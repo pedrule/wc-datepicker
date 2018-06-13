@@ -1,4 +1,5 @@
 import { TranslateDateBehavior } from "./TranslateDateBehavior";
+import { html } from "@polymer/polymer";
 
 export const ConstructOfDate = SuperClass => class extends TranslateDateBehavior(SuperClass) {
     static get properties() {
@@ -35,7 +36,7 @@ export const ConstructOfDate = SuperClass => class extends TranslateDateBehavior
     }
 
     static get styleGridTemplate() {
-        return `
+        return html`
         <style>
                 #content{
                     background: var(--white);

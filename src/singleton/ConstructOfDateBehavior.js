@@ -1,5 +1,5 @@
 import { TranslateDateBehavior } from "./TranslateDateBehavior";
-import { html } from "@polymer/polymer";
+import { html } from "@polymer/polymer/polymer-element.js";
 
 export const ConstructOfDate = SuperClass => class extends TranslateDateBehavior(SuperClass) {
     static get properties() {

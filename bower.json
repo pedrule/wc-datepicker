@@ -1,7 +1,7 @@
 {
-  "name": "rd-datepicker",
+  "name": "pedrule-datepicker",
   "authors": [
-    "pierre Alibert"
+    "pedrule"
   ],
   "license": "ISC",
   "dependencies": {

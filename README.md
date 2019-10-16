@@ -1,4 +1,4 @@
-#Renault-Digital Datepicker
+#Pedrule Datepicker
 
 this web-component allow to easily implements a datepicker with basic functionnalities.
 

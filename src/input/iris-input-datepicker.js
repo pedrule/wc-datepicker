@@ -20,7 +20,7 @@ export class IrisInputDatepicker extends InputSingleton {
 
     connectedCallback() {
         super.connectedCallback();
-        if(!document.body.querySelector('rd-datepicker'))document.body.appendChild(document.createElement('rd-datepicker'))
+        if(!document.body.querySelector('pedrule-datepicker'))document.body.appendChild(document.createElement('pedrule-datepicker'))
     }
 
     static get styleTemplate() {
@@ -93,4 +93,4 @@ export class IrisInputDatepicker extends InputSingleton {
         this.$.input.value = "";
     }
 }
-customElements.define('rd-input-datepicker', IrisInputDatepicker);
+customElements.define('pedrule-input-datepicker', IrisInputDatepicker);

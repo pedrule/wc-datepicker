@@ -1,8 +1,16 @@
 {
-  "name": "rd-datepicker",
-  "version": "1.0.0",
+  "name": "@pedrule/datepicker",
+  "version": "1.0.1",
   "description": "this is a light component to display a date picker. It use web-component specs V1 to be able to run successfully on most popular web platforms and js frameworks.",
-  "main": "index.js",
+  "main": "dist/main.bundle.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/",
+    "src",
+    "index.js"
+  ],
   "scripts": {
     "test": "./node_modules/.bin/wct",
     "build": "./node_modules/.bin/webpack --watch",
@@ -14,11 +22,10 @@
     "webpack",
     "npm"
   ],
-  "author": "pierre Alibert",
+  "author": "pedrule",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://git.renault-digital.com/shared/wc-rd-datepicker.git"
   },
   "devDependencies": {
     "@polymer/iron-flex-layout": "next",

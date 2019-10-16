@@ -10,8 +10,11 @@ services:
       - type: bind
         source: ./src
         target: /src
-      - type: volume
-        source: wc
+      # - type: volume
+      #   source: wc
+      #   target: /dist
+      - type: bind
+        source: ./dist
         target: /dist
     ports:
           - "1812:1812"
@@ -25,9 +28,12 @@ services:
         - type: bind
           source: ./src
           target: /src
-        - type: volume
-          source: wc
+        - type: bind
+          source: ./dist
           target: /dist
+        # - type: volume
+        #   source: wc
+        #   target: /dist
       ports:
             - "1813:1813"
 

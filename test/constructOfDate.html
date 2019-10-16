@@ -9,21 +9,21 @@
 <body>
 <test-fixture id="basic">
     <template>
-        <rd-input-datepicker></rd-input-datepicker>
+        <pedrule-input-datepicker></pedrule-input-datepicker>
     </template>
 </test-fixture>
 <script>
     suite('singleton specs', ()=> {
         setup(()=>{
             this.element = fixture('basic');
-            this.singleton = document.body.querySelector('rd-datepicker');
+            this.singleton = document.body.querySelector('pedrule-datepicker');
             this.callSingleton = () => {
                 this.element.$.input.dispatchEvent(new MouseEvent('click', {bubbles: true, composed: true}));
             }
         });
-        suite('if a new instance of rd-input-datepicker is initialized',()=>{
-            test('a rd-datepicker singleton is added the dom', ()=>{
-                expect(document.body.querySelectorAll('rd-datepicker').length).to.equal(1);
+        suite('if a new instance of pedrule-input-datepicker is initialized',()=>{
+            test('a pedrule-datepicker singleton is added the dom', ()=>{
+                expect(document.body.querySelectorAll('pedrule-datepicker').length).to.equal(1);
             });
 
             test('singleton is not visible', ()=> {
@@ -31,7 +31,7 @@
             })
         });
 
-        suite('when user click on rd-input-datepicker', ()=>{
+        suite('when user click on pedrule-input-datepicker', ()=>{
             test('singleton become visible', ()=>{
                 this.callSingleton();
                 expect(this.singleton.show).to.equal(true);
@@ -65,7 +65,7 @@
         });
 
         suite('selectedDate of iris-input,', ()=>{
-           suite('if there is not selectedDate already setted, current date is displayed by rd-datepicker', ()=>{
+           suite('if there is not selectedDate already setted, current date is displayed by pedrule-datepicker', ()=>{
                setup(()=>{
                    this.element.fireEventToIrisSingleton();
                });
@@ -84,7 +84,7 @@
            })
         });
 
-        suite('keyboard behavior on rd-input-datepicker', ()=>{
+        suite('keyboard behavior on pedrule-input-datepicker', ()=>{
 
         })
     })

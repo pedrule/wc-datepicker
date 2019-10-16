@@ -215,4 +215,4 @@ export class IrisDatePicker extends ConstructOfDate(SingletonBehavior(PositionWi
         super._affectSelectedItemsOnTarget();
     }
 }
-customElements.define('rd-datepicker', IrisDatePicker);
+customElements.define('pedrule-datepicker', IrisDatePicker);

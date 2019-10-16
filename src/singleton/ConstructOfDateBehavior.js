@@ -127,7 +127,7 @@ export const ConstructOfDate = SuperClass => class extends TranslateDateBehavior
                 }
                 
                 .grid div.activeMonth{
-                    opacity: 1;
+                    opacity: 1 !important;
                 }
                 
                 :host(:not([active-grid=day])) .grid div.selected{
